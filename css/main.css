@@ -101,7 +101,9 @@ h6 {
   width: 100%; }
   .nav__item a {
     color: #fff; }
-
+.nav:last-child{
+  margin-right: 20px;
+}
 .wrapper {
   min-height: 100%; }
 
@@ -113,15 +115,33 @@ section {
   margin: 0;
   padding: 0; }
 
-.main__image {
+.main__video {
   width: 100%;
   background-size: cover;
   position: -webkit-sticky;
   position: sticky;
-  top: 0;
-  left: 0; }
+  top: 0px;
+  left: 0; 
+  overflow: hidden;
+}
 
-.about__company {
+video{
+  width: 100%;
+}
+
+.main__content::before{
+  content: "";
+  display: block;
+  position: absolute;
+  top:-335px;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 400px;
+  background-image: url('/img/city.png');
+}
+
+.main__content {
   height: 100vh;
   width: 100%;
   background: linear-gradient(180deg, #0e124e 0%, #0e134f 100%);
@@ -130,16 +150,16 @@ section {
   top: 0;
   left: 0; }
 
-@-webkit-keyframes text {
-  0% {
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: white;
-    background-size: 0; }
-  100% {
-    background: linear-gradient(180deg, #fff 20%, red 200%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 100%; } }
+.title{
+  font-family: Noah;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 65px;
+  line-height: 81px;
+  text-align: center;
+  color: white; 
+  margin-bottom: 35px; 
+}
 
 .nav__item > a {
   transition: background-size 1.5s ease-in-out; }
